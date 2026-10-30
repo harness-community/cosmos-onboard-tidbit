@@ -66,27 +66,24 @@ small enough that you can judge Cosmos's work by reading it.
 ## Prerequisites
 
 - A GitHub account.
-- An email address you can receive mail at, to create your Cosmos account.
+- An email address you can receive mail at, to create your Cosmos account. This 
+  should be a **personal email address** not associated with an existing Cosmos
+  tenant.
 - Permission to install a GitHub App on your own account. If you are using a
-  work GitHub account with restrictions, fork to a personal account instead.
+  work GitHub account with restrictions, **fork to a personal GitHub account**
+  instead.
 - Optional, for Step 4 only: Node 20.19 or later and npm.
 
 A new Cosmos account starts with $20 in credits. The two loops in this
-walkthrough use a small fraction of that, so you can run them more than once if
+walkthrough use about half of that, so you can run them more than once if
 you want to try a different prompt.
 
 ## Step 1 — Fork this repository
 
 Fork this repository to your own GitHub account. Everything after this point
-happens on your fork, not here — you will be opening and merging pull requests,
-which you cannot do against someone else's repository.
+happens on your fork, not in the `harness-community` repository. 
 
 Leave the fork public and keep the default name.
-
-> [!IMPORTANT]
-> Work on your fork for the rest of the walkthrough. If you connect Cosmos to
-> this upstream repository instead, it will have nothing to open a pull request
-> against.
 
 ## Step 2 — Create your Cosmos account
 
