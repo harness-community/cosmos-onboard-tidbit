@@ -1,0 +1,21 @@
+{
+  "name": "cool-professor-clothiers",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Storefront for Cool Professor Clothiers — a sample app for the Cosmos onboarding walkthrough.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.1.5"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
