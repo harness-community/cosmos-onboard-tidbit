@@ -87,12 +87,11 @@ Leave the fork public and keep the default name.
 
 ## Step 2 — Create your Cosmos account
 
-Go to [cosmos.augmentcode.com](https://cosmos.augmentcode.com) and sign up.
+Go to [cosmos.augmentcode.com](https://cosmos.augmentcode.com) and sign up with a personal email address that you have not yet used with the Augment Code platform.
 
 <!-- TODO(verify): confirm the signup flow — email + verification, Google SSO, GitHub SSO? Capture the first screen after login. -->
 
-Once you are in, you will be asked to connect a source of work. That is the next
-step.
+Once you are in, you will be asked to connect a source of work. This walkthrough will use GitHub, and you'll set it up in the next step.
 
 ## Step 3 — Connect your fork to Cosmos
 
@@ -116,7 +115,17 @@ code, push a branch, and open a pull request on your behalf.
 Cosmos will spend a few moments indexing the repository. That index is what
 lets it answer questions about code it has never been shown directly.
 
-## Step 4 — Optional: see the defects for yourself
+## Step 4 - Prompt Cosmos Advisor
+
+After the Augment Code GitHub app is installed to your GitHub account with access
+to your fork of `cosmos-onboard-tidbit`, you will be provided a prompt for your first 
+Session with Cosmos Advisor. Review the prompt and submit it to 
+Cosmos Advisor, and it will create several Experts for you.
+
+Once your experts are created you, you'll continue the session with loops to address the defects
+in the Cool Professor Clothiers app.
+
+## Step 5 — Optional: see the defects for yourself
 
 You do not need to run the app. Both defects are visible in the screenshots
 below, and Cosmos works from the repository rather than from your machine. Run
@@ -137,7 +146,7 @@ it only if you would rather see the behaviour first-hand.
 1. Open the address it prints, scroll to **The collection**, and then try the
    **Notify me** form with any email address.
 
-## Step 5 — First loop: the gallery
+## Step 6 — First loop: the gallery
 
 Here is the first complaint, from a customer browsing on a laptop:
 
@@ -191,7 +200,7 @@ proportions, in a gallery that reflows instead of overflowing:
 > complaint. Judge the change by the result and by whether you would be willing
 > to own the code, not by whether it matches the screenshot pixel for pixel.
 
-## Step 6 — Second loop: the notify form
+## Step 7 — Second loop: the notify form
 
 Now the second complaint. This one is functional, and it is the kind of bug that
 only shows up when someone actually uses the thing:
@@ -238,6 +247,33 @@ Two merged pull requests is the small part. The things worth taking away:
   because it said what the visitor did and what they saw. "The form is broken"
   would have produced a worse pull request.
 
+## Exercise: Improve the factory
+
+The Cosmos Experts did a lot of work for you, but you still had to run the app
+locally to verify their work. If you skipped that step, you had to take the
+Experts' word that the defects were fixed. 
+
+Cosmos Advisor can do more than orchestrate your Experts. As you saw in the
+initial prompt, it can also create experts. Ask Cosmos Advisor to create an
+Expert that can verify fixes to the application. Make your own prompt,
+or use the following:
+
+> Create a new Expert that can verify the work done in each loop. To save
+> me the trouble of running the app locally to see the results, have it
+> take screenshots for me.
+
+When Cosmos Advisor is done, make some other change to the application. 
+It doesn't have to be a bug fix, it can be a new feature.
+
+## Explore
+
+You likely still have credits available. Continue exploring Cosmos
+by either extending the demo application, or creating a new one. You
+can update the Augment GitHub app to access other repositories in your
+GitHub account and work on those. 
+
+If you have any questions along the way, ask the Cosmos Advisor for guidance.
+
 ## Cleanup
 
 Nothing in this walkthrough costs money after you stop, but if you would like to
@@ -251,6 +287,16 @@ Your Cosmos account and any remaining credits stay as they are.
 
 ## Troubleshooting
 
+**I did not get $20 in credits**
+If the domain portion of your email already has users in Cosmos, you
+will be considered part of that tenant for the domain. Sign up using
+a personal email address instead.
+
+**The onboarding flow did not detect the Augment GitHub App installation**
+Make sure you don't already have the app installed in your GitHub account.
+If you do, remove it using the [Cleanup](#cleanup) instructions, and 
+try again.
+
 **Cosmos cannot see my repository.**
 The GitHub App is probably installed on a different account, or scoped to
 different repositories. Check **Settings → Applications** on GitHub, open the
@@ -259,10 +305,6 @@ Cosmos app's configuration, and confirm your fork is in the selected list.
 **The GitHub App install was blocked.**
 Organization accounts can require an owner to approve third-party apps. Fork to
 a personal account instead.
-
-**Cosmos opened a pull request against the upstream repository.**
-It is connected to this repository rather than your fork. Reconnect it to your
-fork and close the stray pull request.
 
 **The change did not fix the problem.**
 Say so in the loop and give it the symptom again, more precisely. Describing
