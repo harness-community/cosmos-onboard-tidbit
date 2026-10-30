@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Professor Clothiers — opening soon</title>
+    <meta
+      name="description"
+      content="Tweed, corduroy and merino for the examined life. Cool Professor Clothiers opens soon."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#collection">Skip to the collection</a>
+
+    <header class="masthead">
+      <div class="masthead__inner">
+        <a class="wordmark" href="#top">Cool Professor Clothiers</a>
+        <nav class="masthead__nav" aria-label="Sections">
+          <a href="#collection">Gallery</a>
+          <a href="#notify">Notify me</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <svg class="starfield" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="#EFE9DC">
+            <circle cx="64" cy="88" r="1.3" opacity=".42" />
+            <circle cx="142" cy="212" r="1" opacity=".3" />
+            <circle cx="196" cy="54" r="1.7" opacity=".55" />
+            <circle cx="238" cy="330" r="1.1" opacity=".32" />
+            <circle cx="286" cy="148" r="1" opacity=".26" />
+            <circle cx="331" cy="472" r="1.4" opacity=".38" />
+            <circle cx="372" cy="96" r="1.2" opacity=".34" />
+            <circle cx="418" cy="258" r="1" opacity=".24" />
+            <circle cx="474" cy="396" r="1.6" opacity=".46" />
+            <circle cx="510" cy="42" r="1.1" opacity=".3" />
+            <circle cx="556" cy="188" r="1.3" opacity=".36" />
+            <circle cx="602" cy="516" r="1" opacity=".22" />
+            <circle cx="648" cy="118" r="1.8" opacity=".52" />
+            <circle cx="690" cy="300" r="1.2" opacity=".33" />
+            <circle cx="738" cy="68" r="1" opacity=".27" />
+            <circle cx="784" cy="430" r="1.5" opacity=".4" />
+            <circle cx="826" cy="166" r="1.1" opacity=".29" />
+            <circle cx="872" cy="352" r="1.3" opacity=".35" />
+            <circle cx="918" cy="84" r="1" opacity=".25" />
+            <circle cx="962" cy="246" r="1.7" opacity=".48" />
+            <circle cx="1004" cy="486" r="1.2" opacity=".31" />
+            <circle cx="1048" cy="130" r="1" opacity=".23" />
+            <circle cx="1096" cy="368" r="1.4" opacity=".37" />
+            <circle cx="1142" cy="204" r="1.1" opacity=".28" />
+            <circle cx="1178" cy="62" r="1.3" opacity=".34" />
+            <circle cx="98" cy="414" r="1.2" opacity=".3" />
+            <circle cx="158" cy="548" r="1" opacity=".22" />
+            <circle cx="262" cy="560" r="1.3" opacity=".3" />
+            <circle cx="404" cy="574" r="1" opacity=".2" />
+            <circle cx="538" cy="344" r="1.1" opacity=".26" />
+            <circle cx="716" cy="552" r="1.2" opacity=".24" />
+            <circle cx="884" cy="586" r="1" opacity=".2" />
+            <circle cx="1030" cy="580" r="1.2" opacity=".26" />
+            <circle cx="1160" cy="476" r="1" opacity=".22" />
+          </g>
+
+          <!-- One asterism, drawn faintly, with the only moving stars on the page -->
+          <g stroke="#C79B4B" stroke-width=".7" opacity=".28" fill="none">
+            <path d="M862 128 934 196 1016 170 1072 240" />
+          </g>
+          <g fill="#EFE9DC">
+            <circle class="star--slow" cx="862" cy="128" r="2.1" />
+            <circle class="star--slow" cx="934" cy="196" r="1.7" />
+            <circle class="star--slow" cx="1016" cy="170" r="2.4" />
+            <circle class="star--slow" cx="1072" cy="240" r="1.8" />
+          </g>
+        </svg>
+
+        <div class="hero__content">
+          <h1 id="hero-title">Dress for the long view.</h1>
+          <p class="hero__lede">
+            Tweed, corduroy and merino, cut for people who think in centuries and
+            teach in fifty-minute blocks.
+          </p>
+          <p class="hero__status">Opening soon</p>
+        </div>
+      </section>
+
+      <section class="collection" id="collection" aria-labelledby="collection-title">
+        <div class="section-head">
+          <h2 id="collection-title">The collection</h2>
+          <p>Three garments to begin with. Made in small runs, sold when ready.</p>
+        </div>
+
+        <ul class="gallery">
+          <li class="plate">
+            <img
+              class="plate__image"
+              src="/garments/tweed-jacket.png"
+              alt="Olive herringbone tweed jacket with leather elbow patches, laid flat"
+            />
+            <div class="plate__line">
+              <h3 class="plate__name">Elbow-Patch</h3>
+              <p class="plate__price">$340</p>
+            </div>
+            <p class="plate__spec">Harris tweed, three-button, with leather elbow patches.</p>
+          </li>
+
+          <li class="plate">
+            <img
+              class="plate__image"
+              src="/garments/corduroy-pants.png"
+              alt="Tobacco-brown corduroy trousers with cuffed hems, laid flat"
+            />
+            <div class="plate__line">
+              <h3 class="plate__name">Seminar</h3>
+              <p class="plate__price">$180</p>
+            </div>
+            <p class="plate__spec">Eight-wale cotton corduroy, flat front, cuffed by hand.</p>
+          </li>
+
+          <li class="plate">
+            <img
+              class="plate__image"
+              src="/garments/turtleneck.png"
+              alt="Charcoal ribbed merino turtleneck with a rolled collar, laid flat"
+            />
+            <div class="plate__line">
+              <h3 class="plate__name">Lecture Hall</h3>
+              <p class="plate__price">$95</p>
+            </div>
+            <p class="plate__spec">Merino lambswool, ribbed, with a collar that rolls twice.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="notify" id="notify" aria-labelledby="notify-title">
+        <div class="notify__inner">
+          <h2 id="notify-title">Be the first to know</h2>
+          <p class="notify__lede">
+            We will write once, on the morning we open. No catalogues, no
+            semester-long campaigns.
+          </p>
+
+          <form class="notify__form" id="notify-form">
+            <label class="visually-hidden" for="notify-email">Email address</label>
+            <input
+              class="notify__input"
+              id="notify-email"
+              type="email"
+              name="email"
+              placeholder="you@university.edu"
+              autocomplete="email"
+              required
+            />
+            <button class="notify__submit" type="submit">Notify me</button>
+          </form>
+
+          <p class="notify__status" id="notify-status" role="status" hidden></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="colophon">
+      <p>Cool Professor Clothiers</p>
+      <p>Garments for the examined life.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

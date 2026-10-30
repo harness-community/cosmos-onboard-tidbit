@@ -1,0 +1,394 @@
+/* Cool Professor Clothiers — storefront styles */
+
+:root {
+  --ink: #0e1726;
+  --ink-deep: #080e18;
+  --slate: #2a3647;
+  --bone: #efe9dc;
+  --bone-dim: #a8a294;
+  --brass: #c79b4b;
+
+  --serif: 'Bodoni Moda', 'Iowan Old Style', Georgia, serif;
+  --sans: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: 1.333rem;
+  --step-2: 1.777rem;
+  --step-3: 2.369rem;
+
+  --measure: 62ch;
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --band: clamp(4rem, 9vw, 7.5rem);
+  --shell: 72rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--bone);
+  font-family: var(--sans);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--brass);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: -4rem;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  background: var(--brass);
+  color: var(--ink);
+  font-size: var(--step--1);
+  text-decoration: none;
+  transition: top 120ms ease-out;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: color-mix(in srgb, var(--ink) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid color-mix(in srgb, var(--brass) 22%, transparent);
+}
+
+.masthead__inner {
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding: 1.1rem var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: var(--step-1);
+  color: var(--bone);
+  text-decoration: none;
+  letter-spacing: 0.005em;
+}
+
+.masthead__nav {
+  display: flex;
+  gap: 1.75rem;
+  font-size: var(--step--1);
+}
+
+.masthead__nav a {
+  color: var(--bone-dim);
+  text-decoration: none;
+}
+
+.masthead__nav a:hover {
+  color: var(--brass);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+      120% 90% at 78% 8%,
+      color-mix(in srgb, var(--slate) 55%, transparent) 0%,
+      transparent 62%
+    ),
+    var(--ink-deep);
+  border-bottom: 1px solid color-mix(in srgb, var(--brass) 18%, transparent);
+}
+
+.starfield {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.star--slow {
+  animation: drift 7s ease-in-out infinite;
+}
+
+.star--slow:nth-of-type(2) {
+  animation-delay: 1.6s;
+}
+
+.star--slow:nth-of-type(3) {
+  animation-delay: 3.1s;
+}
+
+.star--slow:nth-of-type(4) {
+  animation-delay: 4.8s;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .star--slow {
+    animation: none;
+    opacity: 0.8;
+  }
+}
+
+.hero__content {
+  position: relative;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding: clamp(5rem, 14vw, 10rem) var(--gutter) clamp(4.5rem, 11vw, 8rem);
+}
+
+.hero h1 {
+  font-size: clamp(2.65rem, 7.4vw, 4.3rem);
+  line-height: 1.02;
+  max-width: 24ch;
+}
+
+.hero__lede {
+  margin-top: 1.6rem;
+  max-width: 44ch;
+  color: var(--bone-dim);
+  font-size: var(--step-1);
+  line-height: 1.5;
+}
+
+.hero__status {
+  margin-top: 2.5rem;
+  display: inline-block;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--brass);
+  color: var(--brass);
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+}
+
+/* ---------- Collection ---------- */
+
+.collection {
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding: var(--band) var(--gutter);
+}
+
+.section-head h2 {
+  font-size: var(--step-3);
+}
+
+.section-head p {
+  margin-top: 0.7rem;
+  max-width: var(--measure);
+  color: var(--bone-dim);
+}
+
+.gallery {
+  list-style: none;
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+.plate {
+  display: flex;
+  flex-direction: column;
+}
+
+.plate__image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  background: var(--slate);
+}
+
+.plate__line {
+  margin-top: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid color-mix(in srgb, var(--brass) 45%, transparent);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.plate__name {
+  font-size: var(--step-2);
+}
+
+.plate__price {
+  font-family: var(--serif);
+  font-size: var(--step-1);
+  color: var(--brass);
+}
+
+.plate__spec {
+  margin-top: 0.5rem;
+  color: var(--bone-dim);
+  font-size: var(--step--1);
+}
+
+/* ---------- Notify ---------- */
+
+.notify {
+  border-top: 1px solid color-mix(in srgb, var(--brass) 18%, transparent);
+  background: var(--ink-deep);
+}
+
+.notify__inner {
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding: var(--band) var(--gutter);
+}
+
+.notify h2 {
+  font-size: var(--step-3);
+}
+
+.notify__lede {
+  margin-top: 0.7rem;
+  max-width: 46ch;
+  color: var(--bone-dim);
+}
+
+.notify__form {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 34rem;
+}
+
+.notify__input {
+  flex: 1 1 16rem;
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  background: var(--ink);
+  border: 1px solid var(--slate);
+  color: var(--bone);
+  font-family: var(--sans);
+  font-size: var(--step-0);
+}
+
+.notify__input::placeholder {
+  color: color-mix(in srgb, var(--bone-dim) 70%, transparent);
+}
+
+.notify__input:focus-visible {
+  border-color: var(--brass);
+}
+
+.notify__submit {
+  padding: 0.9rem 1.6rem;
+  background: var(--brass);
+  border: 1px solid var(--brass);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--step-0);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.notify__submit:hover {
+  background: color-mix(in srgb, var(--brass) 88%, var(--bone));
+}
+
+.notify__status {
+  margin-top: 1.25rem;
+  color: var(--brass);
+  font-size: var(--step-0);
+}
+
+/* ---------- Colophon ---------- */
+
+.colophon {
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding: 2.75rem var(--gutter) 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 2rem;
+  justify-content: space-between;
+  color: var(--bone-dim);
+  font-size: var(--step--1);
+}
+
+@media (max-width: 34rem) {
+  .masthead__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notify__submit {
+    flex: 1 1 100%;
+  }
+}
